@@ -17,6 +17,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void resetClicked(View view) {
-
+        Game.Game();
     }
 }

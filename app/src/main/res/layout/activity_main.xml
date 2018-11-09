@@ -9,7 +9,7 @@
 
     <android.support.v7.widget.GridLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:layout_gravity="center"
         android:layout_weight="1"
         app:columnCount="3"
@@ -17,82 +17,294 @@
 
         <Button
             android:id="@+id/button10"
-            android:layout_width="110dp"
-            android:layout_height="110dp"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
             android:onClick="tileClicked"
-            android:text="Button" />
+            android:visibility="visible"
+            app:layout_column="0"
+            app:layout_row="0" />
+
+        <ImageButton
+            android:id="@+id/cross10"
+            android:layout_width="99dp"
+            android:layout_height="98dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/ic_close_black_24dp"
+            android:visibility="visible"
+            app:layout_column="0"
+            app:layout_row="0" />
+
+        <ImageButton
+            android:id="@+id/circle10"
+            android:layout_width="99dp"
+            android:layout_height="98dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/ic_panorama_fish_eye_black_24dp"
+            android:visibility="invisible"
+            app:layout_column="0"
+            app:layout_row="0" />
 
         <Button
             android:id="@+id/button11"
-            android:layout_width="110dp"
-            android:layout_height="110dp"
-            android:text="Button"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:onClick="tileClicked"
             app:layout_column="1"
-            app:layout_row="0"
-            android:onClick="tileClicked"/>
+            app:layout_row="0" />
+
+        <ImageButton
+            android:id="@+id/cross11"
+            android:layout_width="99dp"
+            android:layout_height="98dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/ic_close_black_24dp"
+            android:visibility="visible"
+            app:layout_column="1"
+            app:layout_row="0" />
+
+        <ImageButton
+            android:id="@+id/circle11"
+            android:layout_width="99dp"
+            android:layout_height="98dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/ic_panorama_fish_eye_black_24dp"
+            android:visibility="invisible"
+            app:layout_column="1"
+            app:layout_row="0" />
 
         <Button
             android:id="@+id/button12"
-            android:layout_width="110dp"
-            android:layout_height="110dp"
-            android:text="Button"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:onClick="tileClicked"
+            android:visibility="visible"
             app:layout_column="2"
-            app:layout_row="0"
-            android:onClick="tileClicked"/>
+            app:layout_row="0" />
+
+        <ImageButton
+            android:id="@+id/cross12"
+            android:layout_width="99dp"
+            android:layout_height="98dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/ic_close_black_24dp"
+            android:visibility="visible"
+            app:layout_column="2"
+            app:layout_row="0" />
+
+        <ImageButton
+            android:id="@+id/circle12"
+            android:layout_width="99dp"
+            android:layout_height="98dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/ic_panorama_fish_eye_black_24dp"
+            android:visibility="invisible"
+            app:layout_column="2"
+            app:layout_row="0" />
 
         <Button
             android:id="@+id/button13"
-            android:layout_width="110dp"
-            android:layout_height="110dp"
-            android:text="Button"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:onClick="tileClicked"
+            android:visibility="visible"
             app:layout_column="0"
-            app:layout_row="1"
-            android:onClick="tileClicked"/>
+            app:layout_row="1" />
+
+        <ImageButton
+            android:id="@+id/cross13"
+            android:layout_width="99dp"
+            android:layout_height="98dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/ic_close_black_24dp"
+            android:visibility="invisible"
+            app:layout_column="0"
+            app:layout_row="1" />
+
+        <ImageButton
+            android:id="@+id/circle13"
+            android:layout_width="99dp"
+            android:layout_height="98dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/ic_panorama_fish_eye_black_24dp"
+            android:visibility="invisible"
+            app:layout_column="0"
+            app:layout_row="1" />
 
         <Button
             android:id="@+id/button14"
-            android:layout_width="110dp"
-            android:layout_height="110dp"
-            android:text="Button"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:onClick="tileClicked"
             app:layout_column="1"
-            app:layout_row="1"
-            android:onClick="tileClicked"/>
+            app:layout_row="1" />
+
+        <ImageButton
+            android:id="@+id/cross14"
+            android:layout_width="99dp"
+            android:layout_height="98dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/ic_close_black_24dp"
+            android:visibility="visible"
+            app:layout_column="1"
+            app:layout_row="1" />
+
+        <ImageButton
+            android:id="@+id/circle14"
+            android:layout_width="99dp"
+            android:layout_height="98dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/ic_panorama_fish_eye_black_24dp"
+            android:visibility="invisible"
+            app:layout_column="1"
+            app:layout_row="1" />
 
         <Button
             android:id="@+id/button15"
-            android:layout_width="110dp"
-            android:layout_height="110dp"
-            android:text="Button"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:onClick="tileClicked"
             app:layout_column="2"
-            app:layout_row="1"
-            android:onClick="tileClicked"/>
+            app:layout_row="1" />
+
+        <ImageButton
+            android:id="@+id/cross15"
+            android:layout_width="99dp"
+            android:layout_height="98dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/ic_close_black_24dp"
+            android:visibility="visible"
+            app:layout_column="2"
+            app:layout_row="1" />
+
+        <ImageButton
+            android:id="@+id/circle15"
+            android:layout_width="99dp"
+            android:layout_height="98dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/ic_panorama_fish_eye_black_24dp"
+            android:visibility="invisible"
+            app:layout_column="2"
+            app:layout_row="1" />
 
         <Button
             android:id="@+id/button16"
-            android:layout_width="110dp"
-            android:layout_height="110dp"
-            android:text="Button"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:onClick="tileClicked"
             app:layout_column="0"
-            app:layout_row="2"
-            android:onClick="tileClicked"/>
+            app:layout_row="2" />
+
+        <ImageButton
+            android:id="@+id/cross16"
+            android:layout_width="99dp"
+            android:layout_height="98dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/ic_close_black_24dp"
+            android:visibility="visible"
+            app:layout_column="0"
+            app:layout_row="2" />
+
+        <ImageButton
+            android:id="@+id/circle16"
+            android:layout_width="99dp"
+            android:layout_height="98dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/ic_panorama_fish_eye_black_24dp"
+            android:visibility="invisible"
+            app:layout_column="0"
+            app:layout_row="2" />
 
         <Button
             android:id="@+id/button17"
-            android:layout_width="110dp"
-            android:layout_height="110dp"
-            android:text="Button"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:onClick="tileClicked"
             app:layout_column="1"
-            app:layout_row="2"
-            android:onClick="tileClicked"/>
+            app:layout_row="2" />
+
+        <ImageButton
+            android:id="@+id/cross17"
+            android:layout_width="99dp"
+            android:layout_height="98dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/ic_close_black_24dp"
+            android:visibility="visible"
+            app:layout_column="1"
+            app:layout_row="2" />
+
+        <ImageButton
+            android:id="@+id/circle17"
+            android:layout_width="99dp"
+            android:layout_height="98dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/ic_panorama_fish_eye_black_24dp"
+            android:visibility="invisible"
+            app:layout_column="1"
+            app:layout_row="2" />
 
         <Button
             android:id="@+id/button18"
-            android:layout_width="110dp"
-            android:layout_height="110dp"
-            android:text="Button"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:onClick="tileClicked"
             app:layout_column="2"
-            app:layout_row="2"
-            android:onClick="tileClicked"/>
+            app:layout_row="2" />
+
+        <ImageButton
+            android:id="@+id/cross18"
+            android:layout_width="99dp"
+            android:layout_height="98dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/ic_close_black_24dp"
+            android:visibility="visible"
+            app:layout_column="2"
+            app:layout_row="2" />
+
+        <ImageButton
+            android:id="@+id/circle18"
+            android:layout_width="99dp"
+            android:layout_height="98dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/ic_panorama_fish_eye_black_24dp"
+            android:visibility="invisible"
+            app:layout_column="2"
+            app:layout_row="2" />
 
     </android.support.v7.widget.GridLayout>
 
