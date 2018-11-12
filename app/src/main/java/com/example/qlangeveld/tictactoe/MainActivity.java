@@ -13,6 +13,8 @@ public class MainActivity extends AppCompatActivity {
     ImageButton cross10, cross11, cross12, cross13,cross14, cross15,cross16,cross17,cross18;
     ImageButton circle10, circle11, circle12, circle13,circle14, circle15,circle16,circle17,circle18;
 
+    Game game;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -53,6 +55,8 @@ public class MainActivity extends AppCompatActivity {
         button18 = findViewById(R.id.button18);
         cross18 = findViewById(R.id.cross18);
         circle18 = findViewById(R.id.circle18);
+
+        game = new Game();
     }
 
     @Override
@@ -192,156 +196,125 @@ public class MainActivity extends AppCompatActivity {
         button18.setVisibility(RestroreValueButton18);
     }
 
-    private Boolean playerOneTurn = Boolean.TRUE;
-    private Boolean playerTwoTurn = Boolean.FALSE;
 
 
     public void tileClicked(View view) {
-        if (inProgress()) {
+        GameState gimma = game.won();
+
+        if (gimma == GameState.IN_PROGRESS) {
             switch (view.getId()) {
                 case R.id.button10:
-                    if (button10.getVisibility() == View.VISIBLE) {
-                        if (playerOneTurn) {
-                            cross10.setVisibility(View.VISIBLE);
-                            button10.setVisibility(View.INVISIBLE);
-                            playerTwoTurn = Boolean.TRUE;
-                            playerOneTurn = Boolean.FALSE;
-                        } else {
-                            circle10.setVisibility(View.VISIBLE);
-                            button10.setVisibility(View.INVISIBLE);
-                            playerTwoTurn = Boolean.TRUE;
-                            playerOneTurn = Boolean.FALSE;
-                        }
+                    TileState state10 = game.choose(0,0);
+
+                    if (state10 == TileState.CROSS) {
+                        cross10.setVisibility(View.VISIBLE);
+                        button10.setVisibility(View.INVISIBLE);
                     }
-                    break;
+                    if (state10 == TileState.CIRCLE) {
+                        circle10.setVisibility(View.VISIBLE);
+                        button10.setVisibility(View.INVISIBLE);
+                    }break;
 
                 case R.id.button11:
-                    if (button11.getVisibility() == View.VISIBLE) {
-                        if (playerOneTurn) {
-                            cross11.setVisibility(View.VISIBLE);
-                            button11.setVisibility(View.INVISIBLE);
-                            playerOneTurn = Boolean.FALSE;
-                            playerTwoTurn = Boolean.TRUE;
-                        } else {
-                            circle11.setVisibility(View.VISIBLE);
-                            button11.setVisibility(View.INVISIBLE);
-                            playerTwoTurn = Boolean.FALSE;
-                            playerOneTurn = Boolean.TRUE;
-                        }
-                    }break;
+                    TileState state11 = game.choose(0,1);
+
+                    if (state11 == TileState.CROSS) {
+                        cross11.setVisibility(View.VISIBLE);
+                        button11.setVisibility(View.INVISIBLE);
+                    }
+                    if (state11 == TileState.CIRCLE) {
+                        circle11.setVisibility(View.VISIBLE);
+                        button11.setVisibility(View.INVISIBLE);
+                    } break;
 
                 case R.id.button12:
-                    if (button12.getVisibility() == View.VISIBLE) {
-                        if (playerOneTurn) {
-                            cross12.setVisibility(View.VISIBLE);
-                            button12.setVisibility(View.INVISIBLE);
-                            playerOneTurn = Boolean.FALSE;
-                            playerTwoTurn = Boolean.TRUE;
-                        }else {
-                            circle12.setVisibility(View.VISIBLE);
-                            button12.setVisibility(View.INVISIBLE);
-                            playerTwoTurn = Boolean.FALSE;
-                            playerOneTurn = Boolean.TRUE;
-                        }
-                    }break;
+                    TileState state12 = game.choose(0,2);
+
+                    if (state12 == TileState.CROSS) {
+                        cross12.setVisibility(View.VISIBLE);
+                        button12.setVisibility(View.INVISIBLE);
+                    }
+                    if (state12 == TileState.CIRCLE) {
+                        circle12.setVisibility(View.VISIBLE);
+                        button12.setVisibility(View.INVISIBLE);
+                    } break;
 
                 case R.id.button13:
-                    if (button13.getVisibility() == View.VISIBLE) {
-                        if (playerOneTurn) {
-                            cross13.setVisibility(View.VISIBLE);
-                            button13.setVisibility(View.INVISIBLE);
-                            playerOneTurn = Boolean.FALSE;
-                            playerTwoTurn = Boolean.TRUE;
-                        } else {
-                            circle13.setVisibility(View.VISIBLE);
-                            button13.setVisibility(View.INVISIBLE);
-                            playerTwoTurn = Boolean.FALSE;
-                            playerOneTurn = Boolean.TRUE;
-                        }
-                    }break;
+                    TileState state13 = game.choose(1,0);
+
+                    if (state13 == TileState.CROSS) {
+                        cross13.setVisibility(View.VISIBLE);
+                        button13.setVisibility(View.INVISIBLE);
+                    }
+                    if (state13 == TileState.CIRCLE) {
+                        circle13.setVisibility(View.VISIBLE);
+                        button13.setVisibility(View.INVISIBLE);
+                    } break;
 
                 case R.id.button14:
-                    if (button14.getVisibility() == View.VISIBLE) {
-                        if (playerOneTurn) {
-                            cross14.setVisibility(View.VISIBLE);
-                            button14.setVisibility(View.INVISIBLE);
-                            playerOneTurn = Boolean.FALSE;
-                            playerTwoTurn = Boolean.TRUE;
-                        } else {
-                            circle14.setVisibility(View.VISIBLE);
-                            button14.setVisibility(View.INVISIBLE);
-                            playerTwoTurn = Boolean.FALSE;
-                            playerOneTurn = Boolean.TRUE;
-                        }
-                    }break;
+                    TileState state14 = game.choose(1,1);
+
+                    if (state14 == TileState.CROSS) {
+                        cross14.setVisibility(View.VISIBLE);
+                        button14.setVisibility(View.INVISIBLE);
+                    }
+                    if (state14 == TileState.CIRCLE) {
+                        circle14.setVisibility(View.VISIBLE);
+                        button14.setVisibility(View.INVISIBLE);
+                    } break;
 
                 case R.id.button15:
-                    if (button15.getVisibility() == View.VISIBLE) {
-                        if (playerOneTurn) {
-                            cross15.setVisibility(View.VISIBLE);
-                            button15.setVisibility(View.INVISIBLE);
-                            playerOneTurn = Boolean.FALSE;
-                            playerTwoTurn = Boolean.TRUE;
-                        } else {
-                            circle15.setVisibility(View.VISIBLE);
-                            button15.setVisibility(View.INVISIBLE);
-                            playerTwoTurn = Boolean.FALSE;
-                            playerOneTurn = Boolean.TRUE;
-                        }
-                    }break;
+                    TileState state15 = game.choose(1,2);
+
+                    if (state15 == TileState.CROSS) {
+                        cross15.setVisibility(View.VISIBLE);
+                        button15.setVisibility(View.INVISIBLE);
+                    }
+                    if (state15 == TileState.CIRCLE) {
+                        circle15.setVisibility(View.VISIBLE);
+                        button15.setVisibility(View.INVISIBLE);
+                    } break;
 
                 case R.id.button16:
-                    if (button16.getVisibility() == View.VISIBLE) {
-                        if (playerOneTurn) {
-                            cross16.setVisibility(View.VISIBLE);
-                            button16.setVisibility(View.INVISIBLE);
-                            playerOneTurn = Boolean.FALSE;
-                            playerTwoTurn = Boolean.TRUE;
-                        } else {
-                            circle16.setVisibility(View.VISIBLE);
-                            button16.setVisibility(View.INVISIBLE);
-                            playerTwoTurn = Boolean.FALSE;
-                            playerOneTurn = Boolean.TRUE;
-                        }
-                    }break;
+                    TileState state16 = game.choose(2,0);
+
+                    if (state16 == TileState.CROSS) {
+                        cross16.setVisibility(View.VISIBLE);
+                        button16.setVisibility(View.INVISIBLE);
+                    }
+                    if (state16 == TileState.CIRCLE) {
+                        circle16.setVisibility(View.VISIBLE);
+                        button16.setVisibility(View.INVISIBLE);
+                    } break;
 
                 case R.id.button17:
-                    if (button17.getVisibility() == View.VISIBLE) {
-                        if (playerOneTurn) {
-                            cross17.setVisibility(View.VISIBLE);
-                            button17.setVisibility(View.INVISIBLE);
-                            playerOneTurn = Boolean.FALSE;
-                            playerTwoTurn = Boolean.TRUE;
-                        } else {
-                            circle17.setVisibility(View.VISIBLE);
-                            button17.setVisibility(View.INVISIBLE);
-                            playerTwoTurn = Boolean.FALSE;
-                            playerOneTurn = Boolean.TRUE;
-                        }
-                    }break;
+                    TileState state17 = game.choose(2,1);
+
+                    if (state17 == TileState.CROSS) {
+                        cross17.setVisibility(View.VISIBLE);
+                        button17.setVisibility(View.INVISIBLE);
+                    }
+                    if (state17 == TileState.CIRCLE) {
+                        circle17.setVisibility(View.VISIBLE);
+                        button17.setVisibility(View.INVISIBLE);
+                    } break;
 
                 case R.id.button18:
-                    if (button18.getVisibility() == View.VISIBLE) {
-                        if (playerOneTurn) {
-                            cross18.setVisibility(View.VISIBLE);
-                            button18.setVisibility(View.INVISIBLE);
-                            playerOneTurn = Boolean.FALSE;
-                            playerTwoTurn = Boolean.TRUE;
-                        } else {
-                            circle18.setVisibility(View.VISIBLE);
-                            button18.setVisibility(View.INVISIBLE);
-                            playerTwoTurn = Boolean.FALSE;
-                            playerOneTurn = Boolean.TRUE;
-                        }
-                    }break;
+                    TileState state18 = game.choose(2,2);
+
+                    if (state18 == TileState.CROSS) {
+                        cross18.setVisibility(View.VISIBLE);
+                        button18.setVisibility(View.INVISIBLE);
+                    }
+                    if (state18 == TileState.CIRCLE) {
+                        circle18.setVisibility(View.VISIBLE);
+                        button18.setVisibility(View.INVISIBLE);
+                    } break;
             }
         }
     }
 
     public void resetClicked(View view) {
-        playerOneTurn = Boolean.TRUE;
-        playerTwoTurn = Boolean.FALSE;
-
 
         button10.setVisibility(View.VISIBLE);
         cross10.setVisibility(View.INVISIBLE);
@@ -378,62 +351,8 @@ public class MainActivity extends AppCompatActivity {
         button18.setVisibility(View.VISIBLE);
         cross18.setVisibility(View.INVISIBLE);
         circle18.setVisibility(View.INVISIBLE);
+
+        game = new Game();
     }
 
-    private Boolean inProgress() {
-        Boolean check = Boolean.TRUE;
-        // cross won
-        if ((cross10.getVisibility() == View.VISIBLE) && (cross11.getVisibility() == View.VISIBLE) && (cross12.getVisibility() == View.VISIBLE)) {
-            check = Boolean.FALSE;
-        }
-        if ((cross13.getVisibility() == View.VISIBLE) && (cross14.getVisibility() == View.VISIBLE) && (cross15.getVisibility() == View.VISIBLE)) {
-            check = Boolean.FALSE;
-        }
-        if ((cross16.getVisibility() == View.VISIBLE) && (cross17.getVisibility() == View.VISIBLE) && (cross18.getVisibility() == View.VISIBLE)) {
-            check = Boolean.FALSE;
-        }
-        if ((cross10.getVisibility() == View.VISIBLE) && (cross13.getVisibility() == View.VISIBLE) && (cross16.getVisibility() == View.VISIBLE)) {
-            check = Boolean.FALSE;
-        }
-        if ((cross11.getVisibility() == View.VISIBLE) && (cross14.getVisibility() == View.VISIBLE) && (cross17.getVisibility() == View.VISIBLE)) {
-            check = Boolean.FALSE;
-        }
-        if ((cross12.getVisibility() == View.VISIBLE) && (cross15.getVisibility() == View.VISIBLE) && (cross18.getVisibility() == View.VISIBLE)) {
-            check = Boolean.FALSE;
-        }
-        if ((cross10.getVisibility() == View.VISIBLE) && (cross14.getVisibility() == View.VISIBLE) && (cross18.getVisibility() == View.VISIBLE)) {
-            check = Boolean.FALSE;
-        }
-        if ((cross12.getVisibility() == View.VISIBLE) && (cross14.getVisibility() == View.VISIBLE) && (cross16.getVisibility() == View.VISIBLE)) {
-            check = Boolean.FALSE;
-        }
-
-        // circle won
-        if ((circle10.getVisibility() == View.VISIBLE) && (circle11.getVisibility() == View.VISIBLE) && (circle12.getVisibility() == View.VISIBLE)) {
-            check = Boolean.FALSE;
-        }
-        if ((circle13.getVisibility() == View.VISIBLE) && (circle14.getVisibility() == View.VISIBLE) && (circle15.getVisibility() == View.VISIBLE)) {
-            check = Boolean.FALSE;
-        }
-        if ((circle16.getVisibility() == View.VISIBLE) && (circle17.getVisibility() == View.VISIBLE) && (circle18.getVisibility() == View.VISIBLE)) {
-            check = Boolean.FALSE;
-        }
-        if ((circle10.getVisibility() == View.VISIBLE) && (circle13.getVisibility() == View.VISIBLE) && (circle16.getVisibility() == View.VISIBLE)) {
-            check = Boolean.FALSE;
-        }
-        if ((circle11.getVisibility() == View.VISIBLE) && (circle14.getVisibility() == View.VISIBLE) && (circle17.getVisibility() == View.VISIBLE)) {
-            check = Boolean.FALSE;
-        }
-        if ((circle12.getVisibility() == View.VISIBLE) && (circle15.getVisibility() == View.VISIBLE) && (circle18.getVisibility() == View.VISIBLE)) {
-            check = Boolean.FALSE;
-        }
-        if ((circle10.getVisibility() == View.VISIBLE) && (circle14.getVisibility() == View.VISIBLE) && (circle18.getVisibility() == View.VISIBLE)) {
-            check = Boolean.FALSE;
-        }
-        if ((circle12.getVisibility() == View.VISIBLE) && (circle14.getVisibility() == View.VISIBLE) && (circle16.getVisibility() == View.VISIBLE)) {
-            check = Boolean.FALSE;
-        }
-
-        return check;
-    }
 }
