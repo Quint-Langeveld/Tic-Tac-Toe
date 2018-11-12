@@ -320,5 +320,6 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:onClick="resetClicked"
-        tools:text="New Game" />
+        android:text="RESET"
+        tools:text="RESET" />
 </LinearLayout>

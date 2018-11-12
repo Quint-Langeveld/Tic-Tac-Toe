@@ -9,11 +9,50 @@ import android.widget.Button;
 import android.widget.ImageButton;
 
 public class MainActivity extends AppCompatActivity {
+    Button button10, button11, button12, button13,button14,button15,button16,button17,button18;
+    ImageButton cross10, cross11, cross12, cross13,cross14, cross15,cross16,cross17,cross18;
+    ImageButton circle10, circle11, circle12, circle13,circle14, circle15,circle16,circle17,circle18;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        button10 = findViewById(R.id.button10);
+        cross10 = findViewById(R.id.cross10);
+        circle10 = findViewById(R.id.circle10);
+
+        button11 = findViewById(R.id.button11);
+        cross11 = findViewById(R.id.cross11);
+        circle11 = findViewById(R.id.circle11);
+
+        button12 = findViewById(R.id.button12);
+        cross12 = findViewById(R.id.cross12);
+        circle12 = findViewById(R.id.circle12);
+
+        button13 = findViewById(R.id.button13);
+        cross13 = findViewById(R.id.cross13);
+        circle13 = findViewById(R.id.circle13);
+
+        button14 = findViewById(R.id.button14);
+        cross14 = findViewById(R.id.cross14);
+        circle14 = findViewById(R.id.circle14);
+
+        button15 = findViewById(R.id.button15);
+        cross15 = findViewById(R.id.cross15);
+        circle15 = findViewById(R.id.circle15);
+
+        button16 = findViewById(R.id.button16);
+        cross16 = findViewById(R.id.cross16);
+        circle16 = findViewById(R.id.circle16);
+
+        button17 = findViewById(R.id.button17);
+        cross17 = findViewById(R.id.cross17);
+        circle17 = findViewById(R.id.circle17);
+
+        button18 = findViewById(R.id.button18);
+        cross18 = findViewById(R.id.cross18);
+        circle18 = findViewById(R.id.circle18);
     }
 
     @Override
@@ -157,60 +196,21 @@ public class MainActivity extends AppCompatActivity {
     private Boolean playerTwoTurn = Boolean.FALSE;
 
 
-    // create all the items in the layout
-    Button button10 = findViewById(R.id.button10);
-    ImageButton cross10 = findViewById(R.id.cross10);
-    ImageButton circle10 = findViewById(R.id.circle10);
-
-    Button button11 = findViewById(R.id.button11);
-    ImageButton cross11 = findViewById(R.id.cross11);
-    ImageButton circle11 = findViewById(R.id.circle11);
-
-    Button button12 = findViewById(R.id.button12);
-    ImageButton cross12 = findViewById(R.id.cross12);
-    ImageButton circle12 = findViewById(R.id.circle12);
-
-    Button button13 = findViewById(R.id.button13);
-    ImageButton cross13 = findViewById(R.id.cross13);
-    ImageButton circle13 = findViewById(R.id.circle13);
-
-    Button button14 = findViewById(R.id.button14);
-    ImageButton cross14 = findViewById(R.id.cross14);
-    ImageButton circle14 = findViewById(R.id.circle14);
-
-    Button button15 = findViewById(R.id.button15);
-    ImageButton cross15 = findViewById(R.id.cross15);
-    ImageButton circle15 = findViewById(R.id.circle15);
-
-    Button button16 = findViewById(R.id.button16);
-    ImageButton cross16 = findViewById(R.id.cross16);
-    ImageButton circle16 = findViewById(R.id.circle16);
-
-    Button button17 = findViewById(R.id.button17);
-    ImageButton cross17 = findViewById(R.id.cross17);
-    ImageButton circle17 = findViewById(R.id.circle17);
-
-    Button button18 = findViewById(R.id.button18);
-    ImageButton cross18 = findViewById(R.id.cross18);
-    ImageButton circle18 = findViewById(R.id.circle18);
-
-
     public void tileClicked(View view) {
         if (inProgress()) {
             switch (view.getId()) {
                 case R.id.button10:
-                    if ((cross10.getVisibility() == View.INVISIBLE) && (circle10.getVisibility() == View.INVISIBLE)) {
+                    if (button10.getVisibility() == View.VISIBLE) {
                         if (playerOneTurn) {
                             cross10.setVisibility(View.VISIBLE);
                             button10.setVisibility(View.INVISIBLE);
-                            playerTwoTurn = Boolean.FALSE;
                             playerTwoTurn = Boolean.TRUE;
-                        }
-                        if (playerTwoTurn) {
+                            playerOneTurn = Boolean.FALSE;
+                        } else {
                             circle10.setVisibility(View.VISIBLE);
                             button10.setVisibility(View.INVISIBLE);
-                            playerTwoTurn = Boolean.FALSE;
-                            playerOneTurn = Boolean.TRUE;
+                            playerTwoTurn = Boolean.TRUE;
+                            playerOneTurn = Boolean.FALSE;
                         }
                     }
                     break;
@@ -220,10 +220,9 @@ public class MainActivity extends AppCompatActivity {
                         if (playerOneTurn) {
                             cross11.setVisibility(View.VISIBLE);
                             button11.setVisibility(View.INVISIBLE);
-                            playerTwoTurn = Boolean.FALSE;
+                            playerOneTurn = Boolean.FALSE;
                             playerTwoTurn = Boolean.TRUE;
-                        }
-                        if (playerTwoTurn) {
+                        } else {
                             circle11.setVisibility(View.VISIBLE);
                             button11.setVisibility(View.INVISIBLE);
                             playerTwoTurn = Boolean.FALSE;
@@ -236,10 +235,9 @@ public class MainActivity extends AppCompatActivity {
                         if (playerOneTurn) {
                             cross12.setVisibility(View.VISIBLE);
                             button12.setVisibility(View.INVISIBLE);
-                            playerTwoTurn = Boolean.FALSE;
+                            playerOneTurn = Boolean.FALSE;
                             playerTwoTurn = Boolean.TRUE;
-                        }
-                        if (playerTwoTurn) {
+                        }else {
                             circle12.setVisibility(View.VISIBLE);
                             button12.setVisibility(View.INVISIBLE);
                             playerTwoTurn = Boolean.FALSE;
@@ -252,10 +250,9 @@ public class MainActivity extends AppCompatActivity {
                         if (playerOneTurn) {
                             cross13.setVisibility(View.VISIBLE);
                             button13.setVisibility(View.INVISIBLE);
-                            playerTwoTurn = Boolean.FALSE;
+                            playerOneTurn = Boolean.FALSE;
                             playerTwoTurn = Boolean.TRUE;
-                        }
-                        if (playerTwoTurn) {
+                        } else {
                             circle13.setVisibility(View.VISIBLE);
                             button13.setVisibility(View.INVISIBLE);
                             playerTwoTurn = Boolean.FALSE;
@@ -268,10 +265,9 @@ public class MainActivity extends AppCompatActivity {
                         if (playerOneTurn) {
                             cross14.setVisibility(View.VISIBLE);
                             button14.setVisibility(View.INVISIBLE);
-                            playerTwoTurn = Boolean.FALSE;
+                            playerOneTurn = Boolean.FALSE;
                             playerTwoTurn = Boolean.TRUE;
-                        }
-                        if (playerTwoTurn) {
+                        } else {
                             circle14.setVisibility(View.VISIBLE);
                             button14.setVisibility(View.INVISIBLE);
                             playerTwoTurn = Boolean.FALSE;
@@ -284,10 +280,9 @@ public class MainActivity extends AppCompatActivity {
                         if (playerOneTurn) {
                             cross15.setVisibility(View.VISIBLE);
                             button15.setVisibility(View.INVISIBLE);
-                            playerTwoTurn = Boolean.FALSE;
+                            playerOneTurn = Boolean.FALSE;
                             playerTwoTurn = Boolean.TRUE;
-                        }
-                        if (playerTwoTurn) {
+                        } else {
                             circle15.setVisibility(View.VISIBLE);
                             button15.setVisibility(View.INVISIBLE);
                             playerTwoTurn = Boolean.FALSE;
@@ -300,10 +295,9 @@ public class MainActivity extends AppCompatActivity {
                         if (playerOneTurn) {
                             cross16.setVisibility(View.VISIBLE);
                             button16.setVisibility(View.INVISIBLE);
-                            playerTwoTurn = Boolean.FALSE;
+                            playerOneTurn = Boolean.FALSE;
                             playerTwoTurn = Boolean.TRUE;
-                        }
-                        if (playerTwoTurn) {
+                        } else {
                             circle16.setVisibility(View.VISIBLE);
                             button16.setVisibility(View.INVISIBLE);
                             playerTwoTurn = Boolean.FALSE;
@@ -311,31 +305,29 @@ public class MainActivity extends AppCompatActivity {
                         }
                     }break;
 
-                    case R.id.button17:
-                        if (button17.getVisibility() == View.VISIBLE) {
-                            if (playerOneTurn) {
-                                cross17.setVisibility(View.VISIBLE);
-                                button17.setVisibility(View.INVISIBLE);
-                                playerTwoTurn = Boolean.FALSE;
-                                playerTwoTurn = Boolean.TRUE;
-                            }
-                            if (playerTwoTurn) {
-                                circle17.setVisibility(View.VISIBLE);
-                                button17.setVisibility(View.INVISIBLE);
-                                playerTwoTurn = Boolean.FALSE;
-                                playerOneTurn = Boolean.TRUE;
-                            }
-                        }break;
+                case R.id.button17:
+                    if (button17.getVisibility() == View.VISIBLE) {
+                        if (playerOneTurn) {
+                            cross17.setVisibility(View.VISIBLE);
+                            button17.setVisibility(View.INVISIBLE);
+                            playerOneTurn = Boolean.FALSE;
+                            playerTwoTurn = Boolean.TRUE;
+                        } else {
+                            circle17.setVisibility(View.VISIBLE);
+                            button17.setVisibility(View.INVISIBLE);
+                            playerTwoTurn = Boolean.FALSE;
+                            playerOneTurn = Boolean.TRUE;
+                        }
+                    }break;
 
                 case R.id.button18:
                     if (button18.getVisibility() == View.VISIBLE) {
                         if (playerOneTurn) {
                             cross18.setVisibility(View.VISIBLE);
                             button18.setVisibility(View.INVISIBLE);
-                            playerTwoTurn = Boolean.FALSE;
+                            playerOneTurn = Boolean.FALSE;
                             playerTwoTurn = Boolean.TRUE;
-                        }
-                        if (playerTwoTurn) {
+                        } else {
                             circle18.setVisibility(View.VISIBLE);
                             button18.setVisibility(View.INVISIBLE);
                             playerTwoTurn = Boolean.FALSE;
@@ -347,6 +339,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void resetClicked(View view) {
+        playerOneTurn = Boolean.TRUE;
+        playerTwoTurn = Boolean.FALSE;
+
+
         button10.setVisibility(View.VISIBLE);
         cross10.setVisibility(View.INVISIBLE);
         circle10.setVisibility(View.INVISIBLE);
